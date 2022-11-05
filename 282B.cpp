@@ -6,7 +6,9 @@ void solve();
 
 void solve()
 {
-	
+	int n;
+	cin>>n;
+	cout<<n;
 }
 
 
