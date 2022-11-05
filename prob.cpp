@@ -1,6 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
 void solve();
+
+
+
+void solve()
+{
+	int n;
+	cin>>n;
+	cout<<n+2;
+}
+
+
 int main()
 {
 ios_base::sync_with_stdio(false);cin.tie(NULL);
@@ -22,9 +33,4 @@ while(t--)
 cerr<<"time taken : "<<(float)clock()/CLOCKS_PER_SEC<<" secs"<<endl;
 return 0;
 }
-void solve()
-{
-	int n;
-	cin>>n;
-	cout<<n;
-}
+
