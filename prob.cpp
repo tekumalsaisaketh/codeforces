@@ -6,9 +6,41 @@ void solve();
 
 void solve()
 {
-	int n;
-	cin>>n;
-	cout<<n+2;
+	long long a;
+	int b,n;
+	cin>>a>>b>>n;
+	bool gotOne=false;
+	if(a%b==0)
+	{
+		gotOne=true;
+	} 
+	if(!gotOne)
+	{
+		long long x=a;
+		for(int i=0;i<=9;i++)
+			{
+				x=x*10+i;
+				if(x%b==0)
+				{
+					gotOne=true;
+					a=x;
+					break;
+				}
+				x=a;
+			}
+		n--;
+		
+	}
+	if(gotOne)
+	{
+		string x=to_string(a);
+		while(n--)
+		{
+			x+='0';
+		}
+		cout<<x<<endl;
+	}
+	else cout<<-1<<endl;
 }
 
 
@@ -23,7 +55,7 @@ freopen("output.txt", "w", stdout);
 #endif
 
 int t=1;
-/*is Single Test case?*/cin>>t;
+/*is Single Test case?*///cin>>t;
 while(t--)
 {
 	solve();
